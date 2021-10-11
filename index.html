@@ -82,12 +82,10 @@
       // Action for Plus Button (First one)
       const plusBtn = document.getElementById("plusBtn");
       plusBtn.addEventListener("click", function () {
-         if (document.getElementById("inputAmount").value >= 0) {
-            totalAmount("inputAmount", 1);
-            price("price", 1219);
+         totalAmount("inputAmount", 1);
+         price("price", 1219);
 
-            total("subtotal", 1219);
-         }
+         total("subtotal", 1219);
       })
 
       //Action for Minus button (first one)
@@ -104,12 +102,10 @@
       // Action for Plus Button (Second one)
       const plusBtn2 = document.getElementById("plusBtn2");
       plusBtn2.addEventListener("click", function () {
-         if (document.getElementById("inputAmount2").value >= 0) {
-            totalAmount("inputAmount2", 1);
-            price("price2", 59);
+         totalAmount("inputAmount2", 1);
+         price("price2", 59);
 
-            total("subtotal", 59);
-         }
+         total("subtotal", 59);
       })
 
       //Action for Minus button (Second one)
@@ -135,7 +131,6 @@
          let priceNumber = parseFloat(price);
          priceNumber = priceNumber + num;
          document.getElementById(id).innerText = priceNumber;
-         return price;
       }
 
       function total(id, num) {
