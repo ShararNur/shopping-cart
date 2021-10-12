@@ -65,8 +65,8 @@
 
                      <div class="col-md-4 status">
                         <h5>$<span id="subtotal">1278</span></h5>
-                        <h5>$0</h5>
-                        <h5>$<span id="total">1278</span></h5>
+                        <h5 id="tax">$128</h5>
+                        <h5 id="grand-total">$1406</span></h5>
                      </div>
                   </div>
                </div>
@@ -140,11 +140,12 @@
          subtotalNumber = subtotalNumber + num;
          document.getElementById("subtotal").innerText = subtotalNumber;
 
-         document.getElementById("total").innerText = subtotalNumber;
+         const tax = Math.round(subtotalNumber * 0.1);
+         document.getElementById("tax").innerText = '$' + tax;
+
+         const grandTotal = tax + subtotalNumber;
+         document.getElementById("grand-total").innerText = '$' + grandTotal;
       }
-
-
-
 
    </script>
 </body>
